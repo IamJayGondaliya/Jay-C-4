@@ -26,14 +26,18 @@ void arrayDisplay(int a[],int n) {
 	}	
 }
 
-float arrayAvg(int a[],int n) {
+int arraySum(int a[],int n) {	
 	int i,sum = 0;
 	
 	for(i=0; i<n; i++) {
 		sum += a[i];
 	}
 	
-	return (float)sum/(float)n;
+	return sum;
+}
+
+float arrayAvg(int a[],int n) {	
+	return (float)arraySum(a,n)/(float)n;
 }
 
 void main() {
